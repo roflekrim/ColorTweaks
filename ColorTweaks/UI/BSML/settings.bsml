@@ -1,0 +1,37 @@
+<settings-container xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+    <settings-submenu text="→ Default Sliders...">
+        <settings-container>
+            <clickable-text text='⮌ Back' align='Left' click-event='back' />
+            
+            <macro.as-host host="_config">
+                <increment-setting text="Red Slider Minimum" increment="~Increment" value="RedSliderMin" apply-on-change="true" />
+                <increment-setting text="Red Slider Maximum" increment="~Increment" value="RedSliderMax" apply-on-change="true" />
+                <increment-setting text="Green Slider Minimum" increment="~Increment" value="GreenSliderMin" apply-on-change="true" />
+                <increment-setting text="Green Slider Maximum" increment="~Increment" value="GreenSliderMax" apply-on-change="true" />
+                <increment-setting text="Blue Slider Minimum" increment="~Increment" value="BlueSliderMin" apply-on-change="true" />
+                <increment-setting text="Blue Slider Maximum" increment="~Increment" value="BlueSliderMax" apply-on-change="true" />
+            </macro.as-host>
+        </settings-container>
+    </settings-submenu>
+
+    <settings-submenu text="→ Alpha Slider...">
+        <settings-container>
+            <clickable-text text='⮌ Back' align='Left' click-event='back' />
+    
+            <macro.as-host host="_config">
+                <bool-setting text="Enable Alpha Slider" value="EnableAlphaSlider" apply-on-change="true" />
+                <increment-setting text="Alpha Slider Minimum" increment="~Increment" value="AlphaSliderMin" apply-on-change="true" />
+                <increment-setting text="Alpha Slider Maximum" increment="~Increment" value="AlphaSliderMax" apply-on-change="true" />
+            </macro.as-host>
+        </settings-container>
+    </settings-submenu>
+    
+    <macro.as-host host="_config">
+        <increment-setting text="Steps" min="32" increment="32" integer-only="true" value="Steps"
+                           hover-hint="Defines the amount of steps each slider in the color scheme editor has" apply-on-change="true"
+        />
+        <dropdown-list-setting text="Display Mode" options="DisplayModes" value="DisplayMode" apply-on-change="true"
+                               hover-hint="Defines how values will be displayed in the color scheme editor"
+        />
+    </macro.as-host>
+</settings-container>
