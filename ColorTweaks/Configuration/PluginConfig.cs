@@ -28,6 +28,8 @@ internal class PluginConfig
     [UseConverter]
     public virtual XDisplayMode DisplayMode { get; set; } = XDisplayMode.Default;
 
+    #region RGB Sliders
+
     public virtual float RedSliderMin { get; set; } = 0f;
     public virtual float RedSliderMax { get; set; } = 1f;
 
@@ -36,6 +38,18 @@ internal class PluginConfig
 
     public virtual float BlueSliderMin { get; set; } = 0f;
     public virtual float BlueSliderMax { get; set; } = 1f;
+
+    #endregion
+
+    #region HSV Panel
+
+    public virtual float SaturationMin { get; set; } = 0f;
+    public virtual float SaturationMax { get; set; } = 1f;
+
+    public virtual float ValueMin { get; set; } = 0f;
+    public virtual float ValueMax { get; set; } = 1f;
+
+    #endregion
 
     public virtual bool EnableAlphaSlider { get; set; } = false;
     public virtual float AlphaSliderMin { get; set; } = 0f;

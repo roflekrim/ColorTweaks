@@ -1,5 +1,5 @@
 <settings-container xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:noNamespaceSchemaLocation='https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
-    <settings-submenu text="→ Default Sliders...">
+    <settings-submenu text="→ RGB Panel...">
         <settings-container>
             <clickable-text text='⮌ Back' align='Left' click-event='back' />
             
@@ -14,6 +14,19 @@
         </settings-container>
     </settings-submenu>
 
+    <settings-submenu text="→ HSV Panel...">
+        <settings-container>
+            <clickable-text text='⮌ Back' align='Left' click-event='back' />
+
+            <macro.as-host host="_config">
+                <increment-setting text="Saturation Minimum" increment="~Increment" value="SaturationMin" apply-on-change="true" />
+                <increment-setting text="Saturation Maximum" increment="~Increment" value="SaturationMax" apply-on-change="true" />
+                <increment-setting text="Value Minimum" increment="~Increment" value="ValueMin" apply-on-change="true" />
+                <increment-setting text="Value Maximum" increment="~Increment" value="ValueMax" apply-on-change="true" />
+            </macro.as-host>
+        </settings-container>
+    </settings-submenu>
+    
     <settings-submenu text="→ Alpha Slider...">
         <settings-container>
             <clickable-text text='⮌ Back' align='Left' click-event='back' />
